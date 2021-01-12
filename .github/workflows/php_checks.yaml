@@ -14,11 +14,11 @@ jobs:
           php-version: '7.3'
           tools: cs2pr, phpcpd, phpcs, phpmd
 
-            - name: PHP copy past detector
-              run: phpcpd src/
+      - name: PHP copy past detector
+        run: phpcpd src/
 
-            - name: PHP code style
-              run: phpcs src/
+      - name: PHP code style
+        run: phpcs src/
 
-            - name: PHP mess detector
-              run: phpmd src/ text ruleset.xml
+      - name: PHP mess detector
+        run: phpmd src/ text ruleset.xml
