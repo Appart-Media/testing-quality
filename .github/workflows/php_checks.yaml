@@ -15,10 +15,10 @@ jobs:
           tools: cs2pr, phpcpd, phpcs, phpmd
 
       - name: PHP copy past detector
-        run: phpcpd src/
+        run: phpcpd Src/
 
       - name: PHP code style
-        run: phpcs src/
+        run: phpcs Src/
 
       - name: PHP mess detector
-        run: phpmd src/ text ruleset.xml
+        run: phpmd Src/ text ruleset.xml
