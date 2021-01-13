@@ -22,3 +22,15 @@ jobs:
 
       - name: PHP mess detector
         run: phpmd Src/ text ruleset.xml
+
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
+      - name: Run ESLint
+        run: yarn eslint Public/
+
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
+      - name: Run StyleLint
+        run: yarn stylelint Public/*.css
