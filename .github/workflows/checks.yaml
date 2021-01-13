@@ -27,12 +27,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+        -
       - name: Install modules
         run: yarn
+        
       - name: Run ESLint
         run: yarn eslint Public/
 
-      - name: Install modules
-        run: yarn
       - name: Run StyleLint
         run: yarn stylelint Public/*.css
